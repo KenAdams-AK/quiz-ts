@@ -1,0 +1,1 @@
+export const GET_QUIZ_DATA_URL:string = 'https://opentdb.com/api.php?amount=10&category=23&type=multiple'

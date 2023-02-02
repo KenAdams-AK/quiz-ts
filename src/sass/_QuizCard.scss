@@ -1,0 +1,47 @@
+.QuizCard {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		min-height: 45vh;
+		padding: 1.5rem;
+		border: 1px solid $color-grey;
+		border-radius: 0.5rem;
+		transform: translateY(35%);
+	}
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__score {
+		background-color: $color-secondary;
+		padding: 0.5rem 1rem;
+		border-radius: 0.5rem;
+	}
+
+	&__question {
+		flex-grow: 1;
+		font-size: 1.2rem;
+	}
+
+	&__answers {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+
+		& > button {
+			@include button-primary;
+			white-space: nowrap;
+
+			&.correct {
+				background-color: $color-success;
+			}
+			&.wrong {
+				background-color: $color-error;
+			}
+		}
+	}
+}
